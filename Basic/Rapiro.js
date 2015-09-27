@@ -21,23 +21,25 @@ function random (low, high) {
 }
 
 
-
+//web app stuff
 app.get('/M1', function(req, res) {
-   sp.write("#M1"); //move
-   console.log(success)
-   res.send(success)
+   SP.write("#M1"); //move
+   console.log(success);
+   res.send(success);
 });
 
 app.get('/M2', function(req, res){
-  sp.write("#M2"); //backwards
-  console.log(success)
+  SP.write("#M2"); //backwards
+  console.log(success);
+  res.send(success);
 });
 
 app.get('/Wave', function(req, res) {
   var number = Math.floor(random(1,3));
   if (number == 1) {
-      sp.write("#M6"); //wave right
+      SP.write("#M6"); //wave right
   } else {
-    sp.write("#M8"); //wave left 
+    SP.write("#M8"); //wave left
   }
+  res.send(success);
 });
