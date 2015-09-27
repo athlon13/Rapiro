@@ -28,8 +28,8 @@ app.get('/M1', function(req, res) {
    res.send(success);
 });
 
-app.get('/M2', function(req, res){
-  SP.write("#M2"); //backwards
+app.get('/M0', function(req, res){
+  SP.write("#M0"); //hold 
   console.log(success);
   res.send(success);
 });
