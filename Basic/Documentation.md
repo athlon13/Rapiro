@@ -5,23 +5,23 @@ This is the first project. It supports 4 of the serial commands (#M0,#M1,#M6 and
 ###Code Documentation 
 
 
-:: var SP = new SerialPort("/dev/ttyAMA0", {
-    baudrate: 57600,
-    parser: serialport.parsers.readline("\n")
-}); ::
+   var SP = new SerialPort("/dev/ttyAMA0", {
+       baudrate: 57600,
+       parser: serialport.parsers.readline("\n")
+   }); 
 
 SP is the serial port at ttyAMA0 where the Rapiro is connected. 
 
-::
+
 //math stuff
 function random (low, high) {
     return Math.random() * (high - low) + low;
 }
-::
+
 
 This is the randomizer to switch waving between right and left! 
 
-::
+
 //web app stuff
 app.get('/M1', function(req, res) {
    SP.write("#M1"); //move
@@ -44,6 +44,6 @@ app.get('/Wave', function(req, res) {
   }
   res.send(success);
 });
-::
+
 
 This is just basic stuff to control the rapiro "over the air". For more information on express visit http://express.com ! 
