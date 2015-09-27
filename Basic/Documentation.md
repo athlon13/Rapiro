@@ -10,14 +10,15 @@ var SP = new SerialPort("/dev/ttyAMA0", {
     parser: serialport.parsers.readline("\n")
 });
 ´´´ 
-´´´SP´´´ is the serial port at ttyAMA0 where the Rapiro is connected. 
+´´´ SP ´´´ is the serial port at ttyAMA0 where the Rapiro is connected. 
 
 ´´´ 
 //math stuff
 function random (low, high) {
     return Math.random() * (high - low) + low;
 }
-´´´ 
+´´´
+
 This is the randomizer to switch waving between right and left! 
 
 ´´´ 
@@ -44,4 +45,5 @@ app.get('/Wave', function(req, res) {
   res.send(success);
 });
 ´´´
+
 This is just basic stuff to control the rapiro "over the air". For more information on express visit http://express.com ! 
