@@ -4,12 +4,12 @@ This is the first project. It supports 4 of the serial commands (#M0,#M1,#M6 and
 
 ###Code Documentation 
 
-::
-var SP = new SerialPort("/dev/ttyAMA0", {
+
+:: var SP = new SerialPort("/dev/ttyAMA0", {
     baudrate: 57600,
     parser: serialport.parsers.readline("\n")
-});
-::
+}); ::
+
 SP is the serial port at ttyAMA0 where the Rapiro is connected. 
 
 ::
